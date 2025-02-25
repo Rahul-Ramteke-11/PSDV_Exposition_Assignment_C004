@@ -1,1 +1,30 @@
+# About Us
+
+**Meet the Authors** 
+
+We are first-year B.Tech students from the prestigious Indian Institute of Technology, Gandhinagar (IITGN). Our passion for technology, data analysis, and geospatial research brought us together to explore and share the incredible potential of Google Earth Engine (GEE) and Python for geospatial analysis.
+
+**Our Team:**
+
+- 🧑‍🎓 **Rahul Ramteke**  
+  🎓 Roll Number: 24110288  
+  📧 Email: [24110288@iitgn.ac.in](mailto:24110288@iitgn.ac.in)
+
+- 👩‍🎓 **Madhura Melgiri**  
+  🎓 Roll Number: 24110203  
+  📧 Email: [24110203@iitgn.ac.in](mailto:24110203@iitgn.ac.in)
+
+- 🧑‍🎓 **Abhishek Tagalpallewar**  
+  🎓 Roll Number: 24110364  
+  📧 Email: [24110364@iitgn.ac.in](mailto:24110364@iitgn.ac.in)
+
+**About Our Journey:**
+
+As students of IIT Gandhinagar, we believe in hands-on learning and practical applications of our knowledge. Through this blog, we aim to simplify complex geospatial concepts, share tutorials, and provide real-world case studies to empower researchers and developers worldwide.
+
+**Our Vision:**
+
+We aspire to contribute to the field of geospatial technology and environmental monitoring by leveraging tools like Google Earth Engine and Python. Our goal is to make geospatial analysis accessible and impactful.
+
+Thank you for visiting our website and being part of this journey! 🚀
 
