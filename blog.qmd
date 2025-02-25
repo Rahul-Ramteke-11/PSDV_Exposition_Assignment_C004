@@ -1,5 +1,5 @@
 ---
-title: "Quarto Blog"
+title: "Google Earth Engine Python Interface: Accessing and Analyzing Geospatial Data"
 listing:
   contents: posts
   sort: "date desc"
