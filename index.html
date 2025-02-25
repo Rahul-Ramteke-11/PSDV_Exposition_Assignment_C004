@@ -152,14 +152,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="installation-and-setup" class="level2">
 <h2 class="anchored" data-anchor-id="installation-and-setup">Installation and Setup</h2>
 <ul>
-<li><p>Set up a Google Earth Engine Account:</p>
+<li>Set up a Google Earth Engine Account:
 <ol type="1">
 <li>Visit the Google Earth Engine website and sign up.<br>
 </li>
 <li>Once approved, activate the Python API.<br>
 </li>
 </ol></li>
-<li><p>Set up a Google Cloud Project:</p>
+<li>Set up a Google Cloud Project:
 <ol type="1">
 <li>Go to the Google Cloud Console.<br>
 </li>
@@ -168,20 +168,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Note your Google Cloud project ID. (ee-c004)<br>
 </li>
 </ol></li>
-<li><p>Install the Python API:<br>
-</p>
-<pre><p>pip install earthengine-api<br>
-</p></pre></li>
-<li><p>Authenticate:<br>
-</p>
-<pre><p>import ee ee.Authenticate() ee.Initialize(project=‘your-project-id’) # actual project ID : ee-c004 ## Key Features of Google Earth Engine</p></pre></li>
-<li><p><strong>Access to Vast Geospatial Data</strong> – Includes satellite imagery, climate data, elevation models, and more.<br>
-</p></li>
-<li><p><strong>Scalable and Fast Processing</strong>– Uses Google’s cloud infrastructure to handle large-scale geospatial analysis efficiently.<br>
-</p></li>
-<li><p><strong>Advanced Geospatial Tools</strong> – Supports filtering, mapping, statistical operations, and custom algorithm development.<br>
-</p></li>
-<li><p><strong>Seamless Python Integration</strong> – Works smoothly with libraries like Folium, and Pandas for enhanced analysis and visualization.</p></li>
+<li>Install the Python API:<br>
+
+<pre>pip install earthengine-api</pre></li>
+<li>Authenticate:<br>
+
+<pre>import ee
+ee.Authenticate() 
+ee.Initialize(project='your-project-id')  # actual project ID : ee-c004</pre>
+<h2 id="key-features-of-google-earth-engine" class="anchored">Key Features of Google Earth Engine</h2></li>
+<li><strong>Access to Vast Geospatial Data</strong> – Includes satellite imagery, climate data, elevation models, and more.<br>
+</li>
+<li><strong>Scalable and Fast Processing</strong>– Uses Google’s cloud infrastructure to handle large-scale geospatial analysis efficiently.<br>
+</li>
+<li><strong>Advanced Geospatial Tools</strong> – Supports filtering, mapping, statistical operations, and custom algorithm development.<br>
+</li>
+<li><strong>Seamless Python Integration</strong> – Works smoothly with libraries like Folium, and Pandas for enhanced analysis and visualization.</li>
 </ul>
 </section>
 <section id="code-examples" class="level2">
