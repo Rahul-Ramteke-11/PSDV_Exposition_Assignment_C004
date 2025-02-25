@@ -5,6 +5,11 @@
 Our blog dives into the capabilities of this cloud-based platform, designed for large-scale environmental monitoring, urban planning, and scientific research. Whether you're a researcher, developer, or geospatial enthusiast, you’ll find valuable insights, practical tutorials, and real-world applications right here.
 
 ## 🛰️ Why Google Earth Engine?
+
+<p align="center">
+  <img src="https://lh4.googleusercontent.com/proxy/5hjkldjH5sZZ9fZAY2dgCfpTlrEMwxO_hCXp_8N4Dqi0ujcLd0eeCfiLNnRETIQiy5QL-hgPHtUAFuVUWkOlxRYuzdDEPUEam48CnKiZGJFOOg" alt="Google Earth Engine Logo" width="200"/>
+</p>
+
 - 🌐 **Access Vast Geospatial Data:** Explore satellite imagery, climate data, elevation models, and more.
 - ☁️ **Scalable Cloud Processing:** Leverage Google’s powerful infrastructure for fast, large-scale analysis.
 - 🛠️ **Advanced Geospatial Tools:** Filter, map, and analyze data with custom algorithms.
@@ -16,8 +21,8 @@ Our blog dives into the capabilities of this cloud-based platform, designed for 
 - 🌱 Performing NDVI analysis for environmental monitoring
 - 🌆 Real-world use cases in disaster management, urban planning, and ecosystem analysis
 
-![Satellite Imagery](https://example.com/satellite-image.jpg)
-![NDVI Analysis](https://example.com/ndvi-analysis.jpg)
+![Satellite Imagery](https://bsmedia.business-standard.com/_media/bs/img/about-page/thumb/464_464/1625480941.jpg)
+![NDVI Analysis](https://gisgeography.com/wp-content/uploads/2017/08/ndvi-united-states-1.png)
 
 ## 🔗 Discover how Google Earth Engine transforms geospatial data into actionable insights.
 Ready to get started? Head over to our blog and explore detailed guides, code examples, and interactive visualizations!
