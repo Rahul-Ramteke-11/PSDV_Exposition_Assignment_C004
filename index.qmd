@@ -30,8 +30,8 @@ Google Earth Engine (GEE) is a powerful cloud-based platform designed for large-
 
 **Loading and Visualizing Landsat 8 and Sentinel-2 satellites**  
 ```python
-import ee
-import folium
+import ee  # Google Earth Engine API
+import folium  # For creating interactive maps
 
 # Authenticate and initialize
 ee.Initialize(project='ee-c004') # ee-c004 is the project id
