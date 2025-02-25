@@ -10,6 +10,8 @@ website:
         text: Home
       - href: blog.qmd
         text: Blog
+      - href: aboutus.qmd
+        text: About Us
 
 format:
   html:
