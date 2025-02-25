@@ -4,7 +4,7 @@
     "href": "blog.html",
     "title": "Google Earth Engine Python Interface: Accessing and Analyzing Geospatial Data",
     "section": "",
-    "text": "Welcome\n\n\n\n\n\nWelcome Post\n\n\n\n\n\nFeb 14, 2025\n\n\nNipun Batra\n\n\n\n\n\n\n\n\n\n\n\n\nSimple Visualisation\n\n\n\n\n\n\nML\n\n\n\n\n\n\n\n\n\nFeb 14, 2025\n\n\nNipun Batra\n\n\n\n\n\n\nNo matching items"
+    "text": "Welcome\n\n\n\n\n\nWelcome Post\n\n\n\n\n\nFeb 14, 2025\n\n\nNipun Batra\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/welcome.html",
@@ -68,12 +68,5 @@
     "title": "Google Earth Engine Python Interface: Accessing and Analyzing Geospatial Data",
     "section": "",
     "text": "Google Earth Engine Documentation\n\nEarth Engine Python API Guide\n\nIntro to Python API Notebook\n\nGeemap Library"
-  },
-  {
-    "objectID": "posts/visualisation.html",
-    "href": "posts/visualisation.html",
-    "title": "Simple Visualisation",
-    "section": "",
-    "text": "import numpy as np\nimport matplotlib.pyplot as plt\n%matplotlib inline\n%config InlineBackend.figure_format = 'retina'\n\n\nx = np.linspace(0, 10, 100)\ny = np.sin(x)\n\nplt.plot(x, y)"
   }
 ]
