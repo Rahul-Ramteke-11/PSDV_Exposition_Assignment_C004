@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>blog – Google Earth Engine Python Interface: Accessing and Analyzing Geospatial Data</title>
+<title>aboutus – Google Earth Engine Python Interface: Accessing and Analyzing Geospatial Data</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,40 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -126,11 +92,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./blog.html" aria-current="page"> 
+    <a class="nav-link" href="./blog.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./aboutus.html"> 
+    <a class="nav-link active" href="./aboutus.html" aria-current="page"> 
 <span class="menu-text">About Us</span></a>
   </li>  
 </ul>
@@ -151,133 +117,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<section id="google-earth-engine-python-interface-accessing-and-analyzing-geospatial-data" class="level1">
-<h1>Google Earth Engine Python Interface: Accessing and Analyzing Geospatial Data</h1>
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>Google Earth Engine (GEE) is a powerful cloud-based platform designed for large-scale geospatial analysis. It provides access to a vast collection of satellite imagery and geospatial datasets, making it an essential tool for applications like environmental monitoring, urban planning, and scientific research. With its Python API, researchers and developers can seamlessly access, process, and analyze geospatial data, enabling efficient and scalable solutions. In this assignment, we explored the fundamentals of GEE, set up the Python API, and demonstrated how to load and visualize satellite imagery, including Landsat 8 and Sentinel-2.</p>
-</section>
-<section id="installation-and-setup" class="level2">
-<h2 class="anchored" data-anchor-id="installation-and-setup">Installation and Setup</h2>
-<ul>
-<li>Set up a Google Earth Engine Account:
-<ol type="1">
-<li>Visit the Google Earth Engine website and sign up.<br>
-</li>
-<li>Once approved, activate the Python API.<br>
-</li>
-</ol></li>
-<li>Set up a Google Cloud Project:
-<ol type="1">
-<li>Go to the Google Cloud Console.<br>
-</li>
-<li>Ensure that the Earth Engine API has been enabled for the project.<br>
-</li>
-<li>Note your Google Cloud project ID. (ee-c004)<br>
-</li>
-</ol></li>
-<li>Install the Python API:<br>
-
-<pre style="padding: 1rem; overflow: auto; font-size: 85%; line-height: 1.45; color: #24292e; background-color: #f6f8fa; border-radius: 6px; border: 1px solid #d1d5da; font-family: 'Courier New', Courier, monospace;">pip install earthengine-api</pre></li>
-<li>Authenticate:<br>
-
-<pre style="padding: 1rem; overflow: auto; font-size: 85%; line-height: 1.45; color: #24292e; background-color: #f6f8fa; border-radius: 6px; border: 1px solid #d1d5da; font-family: 'Courier New', Courier, monospace;">import ee
-ee.Authenticate() 
-ee.Initialize(project='your-project-id')  # actual project ID : ee-c004</pre>
-<h2 id="key-features-of-google-earth-engine" class="anchored">Key Features of Google Earth Engine</h2></li>
-<li><strong>Access to Vast Geospatial Data</strong> – Includes satellite imagery, climate data, elevation models, and more.<br>
-</li>
-<li><strong>Scalable and Fast Processing</strong>– Uses Google’s cloud infrastructure to handle large-scale geospatial analysis efficiently.<br>
-</li>
-<li><strong>Advanced Geospatial Tools</strong> – Supports filtering, mapping, statistical operations, and custom algorithm development.<br>
-</li>
-<li><strong>Seamless Python Integration</strong> – Works smoothly with libraries like Folium, and Pandas for enhanced analysis and visualization.</li>
-</ul>
-</section>
-<section id="code-examples" class="level2">
-<h2 class="anchored" data-anchor-id="code-examples">Code Examples</h2>
-<p><strong>Loading and Visualizing Landsat 8 and Sentinel-2 satellites</strong></p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> ee  <span class="co"># Google Earth Engine API</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> folium  <span class="co"># For creating interactive maps</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Authenticate and initialize</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>ee.Initialize(project<span class="op">=</span><span class="st">'ee-c004'</span>) <span class="co"># ee-c004 is the project id</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the Landsat 8 image collection</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>landsat_image <span class="op">=</span> (ee.ImageCollection(<span class="st">'LANDSAT/LC08/C02/T1_L2'</span>)</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>                 .filterDate(<span class="st">'2021-01-01'</span>, <span class="st">'2021-12-31'</span>)</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>                 .filterBounds(ee.Geometry.Point([<span class="op">-</span><span class="fl">122.3355</span>, <span class="fl">37.7924</span>]))</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>                 .median())</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the Sentinel-2 image collection</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>sentinel_image <span class="op">=</span> (ee.ImageCollection(<span class="st">'COPERNICUS/S2_HARMONIZED'</span>)</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>                  .filterDate(<span class="st">'2021-01-01'</span>, <span class="st">'2021-12-31'</span>)</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>                  .filterBounds(ee.Geometry.Point([<span class="op">-</span><span class="fl">122.3355</span>, <span class="fl">37.7924</span>]))</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>                  .median())</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualization parameters</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>landsat_vis_params <span class="op">=</span> {<span class="st">'bands'</span>: [<span class="st">'SR_B4'</span>, <span class="st">'SR_B3'</span>, <span class="st">'SR_B2'</span>], <span class="st">'min'</span>: <span class="dv">0</span>, <span class="st">'max'</span>: <span class="fl">0.3</span>, <span class="st">'gamma'</span>: <span class="fl">1.4</span>}</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>sentinel_vis_params <span class="op">=</span> {<span class="st">'bands'</span>: [<span class="st">'B4'</span>, <span class="st">'B3'</span>, <span class="st">'B2'</span>], <span class="st">'min'</span>: <span class="dv">0</span>, <span class="st">'max'</span>: <span class="dv">3000</span>, <span class="st">'gamma'</span>: <span class="fl">1.4</span>}</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Create interactive maps</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>landsat_map <span class="op">=</span> folium.Map(location<span class="op">=</span>[<span class="fl">37.7924</span>, <span class="op">-</span><span class="fl">122.3355</span>], zoom_start<span class="op">=</span><span class="dv">10</span>)</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>landsat_map.save(<span class="st">'landsat_map.html'</span>)</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>sentinel_map <span class="op">=</span> folium.Map(location<span class="op">=</span>[<span class="fl">37.7924</span>, <span class="op">-</span><span class="fl">122.3355</span>], zoom_start<span class="op">=</span><span class="dv">10</span>)</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>sentinel_map.save(<span class="st">'sentinel_map.html'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><strong>Performing NDVI Analysis</strong></p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define a region of interest</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>roi <span class="op">=</span> ee.Geometry.Rectangle([<span class="op">-</span><span class="fl">122.45</span>, <span class="fl">37.70</span>, <span class="op">-</span><span class="fl">122.20</span>, <span class="fl">37.85</span>])</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate NDVI for Landsat 8</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>landsat_ndvi <span class="op">=</span> landsat_image.normalizedDifference([<span class="st">'SR_B5'</span>, <span class="st">'SR_B4'</span>]).rename(<span class="st">'NDVI'</span>)</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate NDVI for Sentinel-2</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>sentinel_ndvi <span class="op">=</span> sentinel_image.normalizedDifference([<span class="st">'B8'</span>, <span class="st">'B4'</span>]).rename(<span class="st">'NDVI'</span>)</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Reduce region to get mean NDVI</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>landsat_mean_ndvi <span class="op">=</span> landsat_ndvi.reduceRegion(reducer<span class="op">=</span>ee.Reducer.mean(), geometry<span class="op">=</span>roi, scale<span class="op">=</span><span class="dv">30</span>)</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>sentinel_mean_ndvi <span class="op">=</span> sentinel_ndvi.reduceRegion(reducer<span class="op">=</span>ee.Reducer.mean(), geometry<span class="op">=</span>roi, scale<span class="op">=</span><span class="dv">30</span>)</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Landsat 8 NDVI:'</span>, landsat_mean_ndvi.getInfo())</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Sentinel-2 NDVI:'</span>, sentinel_mean_ndvi.getInfo())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="screenshots" class="level2">
-<h2 class="anchored" data-anchor-id="screenshots">Screenshots</h2>
-<p><strong>Loading and Visualizing Landsat 8 and Sentinel-2 satellites</strong></p>
-<p><img src="https://raw.githubusercontent.com/Rahul-Ramteke-11/PSDV_Exposition_Assignment_C004/master/code1.jpg" class="img-fluid"></p>
-<p><strong>Performing NDVI Analysis</strong> <img src="https://raw.githubusercontent.com/Rahul-Ramteke-11/PSDV_Exposition_Assignment_C004/master/code2_.jpg" class="img-fluid" alt="code2_"></p>
-<p><strong>Observation from Landsat 8 Satellite</strong><br>
-<img src="https://raw.githubusercontent.com/Rahul-Ramteke-11/PSDV_Exposition_Assignment_C004/master/map1.jpg" class="img-fluid" alt="map1"></p>
-<p><strong>Observation from Sentinel-2 Satellite</strong> <img src="https://raw.githubusercontent.com/Rahul-Ramteke-11/PSDV_Exposition_Assignment_C004/master/map2_.jpg" class="img-fluid" alt="map2_"></p>
-<p><strong>Output Terminal</strong> <img src="https://raw.githubusercontent.com/Rahul-Ramteke-11/PSDV_Exposition_Assignment_C004/master/terminal_output.jpg" class="img-fluid" alt="terminal_output"></p>
-</section>
-<section id="use-cases" class="level2">
-<h2 class="anchored" data-anchor-id="use-cases">Use Cases</h2>
-<ul>
-<li><strong>Tracking Environmental Changes</strong> – Monitor deforestation, assess water quality, and analyze shifts in land cover to understand ecosystem changes over time.</li>
-<li><strong>Disaster Management and Response</strong> – Evaluate the impact of floods, track the spread of wildfires, and monitor drought conditions to support early warnings and recovery efforts.</li>
-<li><strong>Urban Growth and Planning</strong> – Study how cities expand, identify areas affected by heat islands, and analyze infrastructure development for better urban planning.</li>
-</ul>
-</section>
-<section id="conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<p>The Google Earth Engine Python API makes accessing, processing, and analyzing large-scale geospatial data easier. It is a valuable tool for environmental scientists, urban planners, and researchers studying changes in Earth’s&nbsp;landscape.</p>
-</section>
-<section id="references-further-reading" class="level2">
-<h2 class="anchored" data-anchor-id="references-further-reading">References &amp; Further Reading</h2>
-<ul>
-<li><a href="https://developers.google.com/earth-engine">Google Earth Engine Documentation</a><br>
-</li>
-<li><a href="https://developers.google.com/earth-engine/python_install">Earth Engine Python API Guide</a><br>
-</li>
-<li><a href="https://www.geeksforgeeks.org/python-api-tutorial-getting-started-with-apis/">Intro to Python API Notebook</a><br>
-</li>
-<li><a href="https://geemap.org/">Geemap Library</a></li>
-</ul>
 
 
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
