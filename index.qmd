@@ -14,9 +14,10 @@ Google Earth Engine (GEE) is a powerful cloud-based platform designed for large-
     2) Ensure that the Earth Engine API has been enabled for the project.  
     3) Note your Google Cloud project ID.  (ee-c004)  
 - Install the Python API:  
-  <pre>pip install earthengine-api</pre>
+  <pre style="padding: var(--base-size-16); overflow: auto; font-size: 85%; line-height: 1.45; color: var(--fgColor-default, var(--color-fg-default)); background-color: var(--bgColor-muted, var(--color-canvas-subtle)); border-radius: 6px;">pip install earthengine-api</pre>
+
 - Authenticate:  
-  <pre>import ee
+  <pre style="padding: var(--base-size-16); overflow: auto; font-size: 85%; line-height: 1.45; color: var(--fgColor-default, var(--color-fg-default)); background-color: var(--bgColor-muted, var(--color-canvas-subtle)); border-radius: 6px;">import ee
   ee.Authenticate() 
   ee.Initialize(project='your-project-id')  # actual project ID : ee-c004</pre>
 ## Key Features of Google Earth Engine
