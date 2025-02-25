@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "Quarto Template"
+  title: "Google Earth Engine Python Interface: Accessing and Analyzing Geospatial Data"
   navbar:
     right:
       - href: index.qmd
