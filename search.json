@@ -56,13 +56,6 @@
     "text": "Google Earth Engine Documentation\n\nEarth Engine Python API Guide\n\nIntro to Python API Notebook\n\nGeemap Library"
   },
   {
-    "objectID": "aboutus.html",
-    "href": "aboutus.html",
-    "title": "About Us",
-    "section": "",
-    "text": "About Us\nMeet the Authors\nWe are first-year B.Tech students from the prestigious Indian Institute of Technology, Gandhinagar (IITGN). Our passion for technology, data analysis, and geospatial research brought us together to explore and share the incredible potential of Google Earth Engine (GEE) and Python for geospatial analysis.\nOur Team:\n\n🧑‍🎓 Rahul Ramteke\n🎓 Roll Number: 24110288\n📧 Email: 24110288@iitgn.ac.in\n👩‍🎓 Madhura Melgiri\n🎓 Roll Number: 24110203\n📧 Email: 24110203@iitgn.ac.in\n🧑‍🎓 Abhishek Tagalpallewar\n🎓 Roll Number: 24110364\n📧 Email: 24110364@iitgn.ac.in\n\nAbout Our Journey:\nAs students of IIT Gandhinagar, we believe in hands-on learning and practical applications of our knowledge. Through this blog, we aim to simplify complex geospatial concepts, share tutorials, and provide real-world case studies to empower researchers and developers worldwide.\nOur Vision:\nWe aspire to contribute to the field of geospatial technology and environmental monitoring by leveraging tools like Google Earth Engine and Python. Our goal is to make geospatial analysis accessible and impactful.\nThank you for visiting our website and being part of this journey! 🚀"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Welcome to Our Geospatial Insights Hub",
@@ -89,5 +82,12 @@
     "title": "Welcome to Our Geospatial Insights Hub",
     "section": "",
     "text": "Ready to get started? Head over to our blog and explore detailed guides, code examples, and interactive visualizations!"
+  },
+  {
+    "objectID": "aboutus.html",
+    "href": "aboutus.html",
+    "title": "About Us",
+    "section": "",
+    "text": "About Us\nMeet the Authors\nWe are first-year B.Tech students from the prestigious Indian Institute of Technology, Gandhinagar (IITGN). Our passion for technology, data analysis, and geospatial research brought us together to explore and share the incredible potential of Google Earth Engine (GEE) and Python for geospatial analysis.\nOur Team:\n\n🧑‍🎓 Rahul Ramteke\n🎓 Roll Number: 24110288\n📧 Email: 24110288@iitgn.ac.in\n👩‍🎓 Madhura Melgiri\n🎓 Roll Number: 24110203\n📧 Email: 24110203@iitgn.ac.in\n🧑‍🎓 Abhishek Tagalpallewar\n🎓 Roll Number: 24110364\n📧 Email: 24110364@iitgn.ac.in\n\nAbout Our Journey:\nAs students of IIT Gandhinagar, we believe in hands-on learning and practical applications of our knowledge. Through this blog, we aim to simplify complex geospatial concepts, share tutorials, and provide real-world case studies to empower researchers and developers worldwide.\nOur Vision:\nWe aspire to contribute to the field of geospatial technology and environmental monitoring by leveraging tools like Google Earth Engine and Python. Our goal is to make geospatial analysis accessible and impactful.\nThank you for visiting our website and being part of this journey! 🚀"
   }
 ]
