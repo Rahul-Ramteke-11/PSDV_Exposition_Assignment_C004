@@ -86,16 +86,16 @@ print('Sentinel-2 NDVI:', sentinel_mean_ndvi.getInfo())
 ![code1](https://github.com/Rahul-Ramteke-11/PSDV_Exposition_Assignment_C004/blob/master/code1.jpg)  
 
 **Performing NDVI Analysis**
-![code2](https://github.com/Rahul-Ramteke-11/PSDV_Exposition_Assignment_C004/blob/master/code2_.jpg)  
+![code2_](https://github.com/Rahul-Ramteke-11/PSDV_Exposition_Assignment_C004/blob/master/code2_.jpg)  
 
 **Observation from Landsat 8 Satellite**  
 ![map1](https://github.com/Rahul-Ramteke-11/PSDV_Exposition_Assignment_C004/blob/master/map1.jpg)  
 
 **Observation from Sentinel-2 Satellite**
-![map2](https://github.com/Rahul-Ramteke-11/PSDV_Exposition_Assignment_C004/blob/master/map2_.jpg)
+![map2_](https://github.com/Rahul-Ramteke-11/PSDV_Exposition_Assignment_C004/blob/master/map2_.jpg)
 
 **Output Terminal**
-![terminal](https://github.com/Rahul-Ramteke-11/PSDV_Exposition_Assignment_C004/blob/master/terminal_output.jpg)
+![terminal_output](https://github.com/Rahul-Ramteke-11/PSDV_Exposition_Assignment_C004/blob/master/terminal_output.jpg)
 
 
 
