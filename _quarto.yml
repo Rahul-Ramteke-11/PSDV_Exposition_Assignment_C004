@@ -5,9 +5,11 @@ project:
 website:
   title: "Google Earth Engine Python Interface: Accessing and Analyzing Geospatial Data"
   navbar:
-    right:
-      - href: index.qmd
-        text: Home
+ right:
+  - href: index.qmd
+    text: Home
+  - href: blog.qmd
+    text: Blog
 
 
 format:
