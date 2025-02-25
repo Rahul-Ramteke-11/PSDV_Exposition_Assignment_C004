@@ -1,114 +1,49 @@
-# Google Earth Engine Python Interface: Accessing and Analyzing Geospatial Data
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geospatial Insights Hub</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; box-sizing: border-box; }
+        header { text-align: center; padding: 2rem; background: #f4f4f4; }
+        h1 { font-size: 2.5rem; }
+        section { max-width: 800px; margin: 2rem auto; padding: 1rem; }
+        .highlight { background: #e8f5e9; padding: 1rem; border-radius: 8px; }
+        ul { list-style: none; padding: 0; }
+        ul li { margin: 0.5rem 0; }
+        img.python-logo { width: 20px; height: 20px; vertical-align: middle; }
+        footer { text-align: center; margin: 2rem 0; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🌍 Welcome to Our Geospatial Insights Hub</h1>
+        <p>Explore the Power of Geospatial Analysis with Google Earth Engine Python API!</p>
+    </header>
 
-## Introduction
+    <section>
+        <h2>🛰️ Why Google Earth Engine?</h2>
+        <ul>
+            <li>🌐 Access Vast Geospatial Data: Explore satellite imagery, climate data, elevation models, and more.</li>
+            <li>☁️ Scalable Cloud Processing: Leverage Google’s powerful infrastructure for fast, large-scale analysis.</li>
+            <li>🛠️ Advanced Geospatial Tools: Filter, map, and analyze data with custom algorithms.</li>
+            <li><img src="/mnt/data/image.png" alt="Python Logo" class="python-logo"> Seamless Python Integration: Combine GEE with libraries like Folium and Pandas for enhanced visualization and analysis.</li>
+        </ul>
+    </section>
 
-Google Earth Engine (GEE) is a powerful cloud-based platform designed for large-scale geospatial analysis. It provides access to a vast collection of satellite imagery and geospatial datasets, making it an essential tool for applications like environmental monitoring, urban planning, and scientific research. With its Python API, researchers and developers can seamlessly access, process, and analyze geospatial data, enabling efficient and scalable solutions. In this assignment, we explored the fundamentals of GEE, set up the Python API, and demonstrated how to load and visualize satellite imagery, including Landsat 8 and Sentinel-2.
+    <section class="highlight">
+        <h2>🗺️ What You’ll Learn</h2>
+        <ul>
+            <li>🚀 Setting up and authenticating the Google Earth Engine Python API</li>
+            <li>🖼️ Accessing and visualizing satellite imagery like Landsat 8 and Sentinel-2</li>
+            <li>🌱 Performing NDVI analysis for environmental monitoring</li>
+            <li>🌆 Real-world use cases in disaster management, urban planning, and ecosystem analysis</li>
+        </ul>
+    </section>
 
-## Installation and Setup
-
-- Set up a Google Earth Engine Account:  
-    1) Visit the Google Earth Engine website and sign up.  
-    2) Once approved, activate the Python API.  
-- Set up a Google Cloud Project:  
-    1) Go to the Google Cloud Console.  
-    2) Ensure that the Earth Engine API has been enabled for the project.  
-    3) Note your Google Cloud project ID.  (ee-c004)  
-- Install the Python API:  
-  <pre style="padding: 1rem; overflow: auto; font-size: 85%; line-height: 1.45; color: #24292e; background-color: #f6f8fa; border-radius: 6px; border: 1px solid #d1d5da; font-family: 'Courier New', Courier, monospace;">pip install earthengine-api</pre>
-
-- Authenticate:  
-  <pre style="padding: 1rem; overflow: auto; font-size: 85%; line-height: 1.45; color: #24292e; background-color: #f6f8fa; border-radius: 6px; border: 1px solid #d1d5da; font-family: 'Courier New', Courier, monospace;">import ee
-  ee.Authenticate() 
-  ee.Initialize(project='your-project-id')  # actual project ID : ee-c004</pre>
-## Key Features of Google Earth Engine
-
-- **Access to Vast Geospatial Data** – Includes satellite imagery, climate data, elevation models, and more.  
-- **Scalable and Fast Processing**– Uses Google’s cloud infrastructure to handle large-scale geospatial analysis efficiently.  
-- **Advanced Geospatial Tools** – Supports filtering, mapping, statistical operations, and custom algorithm development.  
-- **Seamless Python Integration** – Works smoothly with libraries like Folium, and Pandas for enhanced analysis and visualization.
-
-## Code Examples 
-
-**Loading and Visualizing Landsat 8 and Sentinel-2 satellites**  
-```python
-import ee  # Google Earth Engine API
-import folium  # For creating interactive maps
-
-# Authenticate and initialize
-ee.Initialize(project='ee-c004') # ee-c004 is the project id
-
-# Load the Landsat 8 image collection
-landsat_image = (ee.ImageCollection('LANDSAT/LC08/C02/T1_L2')
-                 .filterDate('2021-01-01', '2021-12-31')
-                 .filterBounds(ee.Geometry.Point([-122.3355, 37.7924]))
-                 .median())
-
-# Load the Sentinel-2 image collection
-sentinel_image = (ee.ImageCollection('COPERNICUS/S2_HARMONIZED')
-                  .filterDate('2021-01-01', '2021-12-31')
-                  .filterBounds(ee.Geometry.Point([-122.3355, 37.7924]))
-                  .median())
-
-# Visualization parameters
-landsat_vis_params = {'bands': ['SR_B4', 'SR_B3', 'SR_B2'], 'min': 0, 'max': 0.3, 'gamma': 1.4}
-sentinel_vis_params = {'bands': ['B4', 'B3', 'B2'], 'min': 0, 'max': 3000, 'gamma': 1.4}
-
-# Create interactive maps
-landsat_map = folium.Map(location=[37.7924, -122.3355], zoom_start=10)
-landsat_map.save('landsat_map.html')
-sentinel_map = folium.Map(location=[37.7924, -122.3355], zoom_start=10)
-sentinel_map.save('sentinel_map.html')
-```
-**Performing NDVI Analysis**
-
-```python
-# Define a region of interest
-roi = ee.Geometry.Rectangle([-122.45, 37.70, -122.20, 37.85])
-
-# Calculate NDVI for Landsat 8
-landsat_ndvi = landsat_image.normalizedDifference(['SR_B5', 'SR_B4']).rename('NDVI')
-
-# Calculate NDVI for Sentinel-2
-sentinel_ndvi = sentinel_image.normalizedDifference(['B8', 'B4']).rename('NDVI')
-
-# Reduce region to get mean NDVI
-landsat_mean_ndvi = landsat_ndvi.reduceRegion(reducer=ee.Reducer.mean(), geometry=roi, scale=30)
-sentinel_mean_ndvi = sentinel_ndvi.reduceRegion(reducer=ee.Reducer.mean(), geometry=roi, scale=30)
-
-print('Landsat 8 NDVI:', landsat_mean_ndvi.getInfo())
-print('Sentinel-2 NDVI:', sentinel_mean_ndvi.getInfo())
-```
-
-
-## Screenshots
-**Loading and Visualizing Landsat 8 and Sentinel-2 satellites**
-
-![](https://raw.githubusercontent.com/Rahul-Ramteke-11/PSDV_Exposition_Assignment_C004/master/code1.jpg)  
-
-**Performing NDVI Analysis**
-![code2_](https://raw.githubusercontent.com/Rahul-Ramteke-11/PSDV_Exposition_Assignment_C004/master/code2_.jpg)  
-
-**Observation from Landsat 8 Satellite**  
-![map1](https://raw.githubusercontent.com/Rahul-Ramteke-11/PSDV_Exposition_Assignment_C004/master/map1.jpg)  
-
-**Observation from Sentinel-2 Satellite**
-![map2_](https://raw.githubusercontent.com/Rahul-Ramteke-11/PSDV_Exposition_Assignment_C004/master/map2_.jpg)
-
-**Output Terminal**
-![terminal_output](https://raw.githubusercontent.com/Rahul-Ramteke-11/PSDV_Exposition_Assignment_C004/master/terminal_output.jpg)
-
-
-
-## Use Cases
-- **Tracking Environmental Changes** – Monitor deforestation, assess water quality, and analyze shifts in land cover to understand ecosystem changes over time.
-- **Disaster Management and Response** – Evaluate the impact of floods, track the spread of wildfires, and monitor drought conditions to support early warnings and recovery efforts.
-- **Urban Growth and Planning** – Study how cities expand, identify areas affected by heat islands, and analyze infrastructure development for better urban planning.
-
-## Conclusion
-The Google Earth Engine Python API makes accessing, processing, and analyzing large-scale geospatial data easier. It is a valuable tool for environmental scientists, urban planners, and researchers studying changes in Earth’s landscape.
-
-## References & Further Reading
-- [Google Earth Engine Documentation](https://developers.google.com/earth-engine)  
-- [Earth Engine Python API Guide](https://developers.google.com/earth-engine/python_install)  
-- [Intro to Python API Notebook](https://www.geeksforgeeks.org/python-api-tutorial-getting-started-with-apis/)  
-- [Geemap Library](https://geemap.org/)
+    <footer>
+        <p>🔗 Discover how Google Earth Engine transforms geospatial data into actionable insights. Ready to get started? Head over to our blog and explore detailed guides, code examples, and interactive visualizations!</p>
+    </footer>
+</body>
+</html>
