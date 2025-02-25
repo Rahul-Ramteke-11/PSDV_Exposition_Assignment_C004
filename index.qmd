@@ -7,7 +7,7 @@ Our blog dives into the capabilities of this cloud-based platform, designed for 
 ## 🛰️ Why Google Earth Engine?
 
 <p align="center">
-  <img src="https://lh4.googleusercontent.com/proxy/5hjkldjH5sZZ9fZAY2dgCfpTlrEMwxO_hCXp_8N4Dqi0ujcLd0eeCfiLNnRETIQiy5QL-hgPHtUAFuVUWkOlxRYuzdDEPUEam48CnKiZGJFOOg" alt="Google Earth Engine Logo" width="200"/>
+  <img src="https://lh4.googleusercontent.com/proxy/5hjkldjH5sZZ9fZAY2dgCfpTlrEMwxO_hCXp_8N4Dqi0ujcLd0eeCfiLNnRETIQiy5QL-hgPHtUAFuVUWkOlxRYuzdDEPUEam48CnKiZGJFOOg" alt="Google Earth Engine Logo" width="400"/>
 </p>
 
 - 🌐 **Access Vast Geospatial Data:** Explore satellite imagery, climate data, elevation models, and more.
@@ -21,8 +21,17 @@ Our blog dives into the capabilities of this cloud-based platform, designed for 
 - 🌱 Performing NDVI analysis for environmental monitoring
 - 🌆 Real-world use cases in disaster management, urban planning, and ecosystem analysis
 
-![Satellite Imagery](https://bsmedia.business-standard.com/_media/bs/img/about-page/thumb/464_464/1625480941.jpg)
-![NDVI Analysis](https://gisgeography.com/wp-content/uploads/2017/08/ndvi-united-states-1.png)
+<p align="center">
+  <img src="https://bsmedia.business-standard.com/_media/bs/img/about-page/thumb/464_464/1625480941.jpg" alt="Satellite Imagery" width="400"/>
+  <br>
+  <strong>Satellite Imagery</strong>
+</p>
+
+<p align="center">
+  <img src="https://gisgeography.com/wp-content/uploads/2017/08/ndvi-united-states-1.png" alt="NDVI Analysis" width="400"/>
+  <br>
+  <strong>NDVI Analysis</strong>
+</p>
 
 ## 🔗 Discover how Google Earth Engine transforms geospatial data into actionable insights.
 Ready to get started? Head over to our blog and explore detailed guides, code examples, and interactive visualizations!
